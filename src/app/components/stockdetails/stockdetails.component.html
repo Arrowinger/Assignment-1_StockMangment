@@ -1,0 +1,38 @@
+<p class="heading">Stock Details</p>
+
+<div class="center">
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Stock Id</th>
+            <th>Stock Name</th>
+            <th>Stock Industry</th>
+            <th>Stock Purchase Price</th>
+            <th>Stock Current Price</th>
+            <th>Stock Qunatity</th>
+            <th>Investment Value</th>
+            <th>Current Value</th>
+            <th>Status</th>
+            <th>Recomendation</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of stockDetails">
+
+            <td>{{s.stockId}}</td>
+            <td>{{s.stockName}}</td>
+            <td>{{s.stockIndustry}}</td>
+            <td>{{s.stockPurchasePrice}}</td>
+            <td>{{s.stockCurrentPrice}}</td>
+            <td>{{s.stockQty}}</td>
+            <td>{{s.stockPurchasePrice | calculateValue : s.stockQty}}</td>
+            <td>{{s.stockCurrentPrice | calculateValue : s.stockQty}}</td>
+            <td>{{s.stockQty | statusCheck : s.stockCurrentPrice : s.stockPurchasePrice}}</td>
+            <td>{{s.stockQty | recomendation : s.stockCurrentPrice : s.stockPurchasePrice}}</td>
+
+
+        </tr>
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,24 @@
+.heading{
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+}
+.center{
+  display: flex;
+  justify-content: center;
+}
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 20px;
+  min-width: 400px;
+}
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
